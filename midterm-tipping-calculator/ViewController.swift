@@ -12,6 +12,9 @@ class ViewController: UIViewController {
     @IBOutlet var leftSpacer: UIView!
     @IBOutlet var rightSpacer: UIView!
     @IBOutlet var fifthStack: UIView!
+    @IBOutlet var billField: UITextField!
+    @IBOutlet var tipPercentField: UITextField!
+    @IBOutlet var numOfPeopleField: UITextField!
     
     var faceView: UIImageView!
 
@@ -36,7 +39,12 @@ class ViewController: UIViewController {
         fvLeadingConstraint.isActive = true
         fvTrailingConstraint.isActive = true
     }
-
+    
+    @IBAction func dismissKeyBoard(_ sender: UITapGestureRecognizer) {
+        self.billField.resignFirstResponder()
+        self.tipPercentField.resignFirstResponder()
+        self.numOfPeopleField.resignFirstResponder()
+    }
 
 }
 
