@@ -180,6 +180,11 @@
                             <constraint firstItem="sT0-8X-Bgf" firstAttribute="leading" secondItem="6d5-qU-NI3" secondAttribute="trailing" id="zdF-yv-Aof"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="fifthStack" destination="QgQ-gt-DDc" id="sqB-lR-Ghp"/>
+                        <outlet property="leftSpacer" destination="Vzh-0o-tNz" id="nYe-kK-kJT"/>
+                        <outlet property="rightSpacer" destination="sT0-8X-Bgf" id="DLV-sr-ajN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
