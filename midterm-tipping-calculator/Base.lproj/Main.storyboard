@@ -48,6 +48,9 @@
                                 <buttonConfiguration key="configuration" style="filled" title="RESET">
                                     <color key="baseBackgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="resetButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rCK-AF-DHN"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="Yni-8G-MgO" userLabel="FirstStack">
                                 <rect key="frame" x="25" y="353.33333333333331" width="343" height="36"/>
@@ -65,6 +68,10 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                        <connections>
+                                            <action selector="calcTips:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="YQl-fc-ZNy"/>
+                                            <action selector="calcTotal:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="Azi-CQ-ZHH"/>
+                                        </connections>
                                     </textField>
                                 </subviews>
                             </stackView>
@@ -84,6 +91,10 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                        <connections>
+                                            <action selector="calcTips:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="IbR-Ql-ZUG"/>
+                                            <action selector="calcTotal:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="Ejp-nC-u9u"/>
+                                        </connections>
                                     </textField>
                                 </subviews>
                             </stackView>
@@ -103,6 +114,10 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                        <connections>
+                                            <action selector="calcTips:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="uK0-cj-6Ya"/>
+                                            <action selector="calcTotal:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="E4e-e4-7cJ"/>
+                                        </connections>
                                     </textField>
                                 </subviews>
                             </stackView>
@@ -189,6 +204,9 @@
                         <outlet property="fifthStack" destination="QgQ-gt-DDc" id="sqB-lR-Ghp"/>
                         <outlet property="leftSpacer" destination="Vzh-0o-tNz" id="nYe-kK-kJT"/>
                         <outlet property="numOfPeopleField" destination="6Rh-vl-0ar" id="Q9y-IY-UL8"/>
+                        <outlet property="perPersonTip" destination="53H-T3-Btf" id="Ojn-9F-dbK"/>
+                        <outlet property="perPersonTotal" destination="6zr-KL-2we" id="Seb-ey-sVu"/>
+                        <outlet property="resetButton" destination="tlb-vl-eBQ" id="Epe-co-NDn"/>
                         <outlet property="rightSpacer" destination="sT0-8X-Bgf" id="DLV-sr-ajN"/>
                         <outlet property="tipPercentField" destination="l7W-0l-VAw" id="G9L-cF-xF3"/>
                     </connections>
