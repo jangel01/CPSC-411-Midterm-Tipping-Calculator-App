@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     @IBOutlet var billField: UITextField!
     @IBOutlet var tipPercentField: UITextField!
     @IBOutlet var numOfPeopleField: UITextField!
+    @IBOutlet var resetButton: UIButton!
     
     var faceView: UIImageView!
 
@@ -45,6 +46,16 @@ class ViewController: UIViewController {
         self.tipPercentField.resignFirstResponder()
         self.numOfPeopleField.resignFirstResponder()
     }
+    
+    @IBAction func resetButtonTapped(_ sender: UIButton) {
+        //Whenever the resetButton is tapped clear all textFields
+        print("Reset button tapped!")
+        billField.text = ""
+        tipPercentField.text = ""
+        numOfPeopleField.text = ""
+        
+    }
+    
 
 }
 
