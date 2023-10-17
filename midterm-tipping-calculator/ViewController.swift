@@ -20,6 +20,9 @@ class ViewController: UIViewController {
     @IBOutlet var resetButton: UIButton!
     
     var faceView: UIImageView!
+    var billDouble: Double!
+    var tipPercentDouble: Double!
+    var numPeopleDouble: Double!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,53 +61,56 @@ class ViewController: UIViewController {
         billField.text = ""
         tipPercentField.text = ""
         numOfPeopleField.text = ""
+        perPersonTip.text = "$0.00"
+        perPersonTotal.text = "$0.00"
         
     }
     
     @IBAction func calcTips(_ sender: UITextField) {
         //Get the information of the text fields
-        let billText = billField.text ?? ""
-        let billDouble = Double(billText) ?? 100.00
-        let tipPercentText = tipPercentField.text ?? ""
-        let tipPercentDouble = Double(tipPercentText) ?? 16.00
-        let numOfPeopleText = numOfPeopleField.text ?? ""
-        let numOfPeopleDouble = Double(numOfPeopleText) ?? 1.00
+        getTextInfo()
         
         //Calculate the total tips divided by amount of people
-        let tipCalc = (billDouble * (tipPercentDouble / 100)) / numOfPeopleDouble
+        let tipCalc = (billDouble * (tipPercentDouble / 100)) / numPeopleDouble
         
         //Turn it into a string and add the $ infront
         var tipCalcText = String(tipCalc)
         tipCalcText = "$" + tipCalcText
         perPersonTip.text = tipCalcText
         
+        //Logging comment
         print("Tip has been calculated!")
     }
     
     @IBAction func calcTotal(_ sender: UITextField) {
         //Get the information of the text fields
-        let billText = billField.text ?? ""
-        let billDouble = Double(billText) ?? 100.00
-        let tipPercentText = tipPercentField.text ?? ""
-        let tipPercentDouble = Double(tipPercentText) ?? 16.00
-        let numOfPeopleText = numOfPeopleField.text ?? ""
-        let numOfPeopleDouble = Double(numOfPeopleText) ?? 1.00
+        getTextInfo()
         
         //Calculate the total divided by amount of people
-        let totalCalc = (billDouble + (billDouble * (tipPercentDouble / 100))) / numOfPeopleDouble
+        let totalCalc = (billDouble + (billDouble * (tipPercentDouble / 100))) / numPeopleDouble
         
         //Turn it into a string and add the $ infront
         var totalCalcText = String(totalCalc)
         totalCalcText = "$" + totalCalcText
         perPersonTotal.text = totalCalcText
         
+        //Logging comment
         print("Total has been calculated!")
         
     }
     
-    
-    
-    
-
+    func getTextInfo() {
+        //Get the information of the text fields
+        let billText = billField.text ?? ""
+        billDouble = Double(billText) ?? 100.00
+        let tipPercentText = tipPercentField.text ?? ""
+        tipPercentDouble = Double(tipPercentText) ?? 16.00
+        let numOfPeopleText = numOfPeopleField.text ?? ""
+        numPeopleDouble = Double(numOfPeopleText) ?? 1.00
+        
+        //Logging comment
+        print("Bill info obtained!")
+        
+    }
 }
 
