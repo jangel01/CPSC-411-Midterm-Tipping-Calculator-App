@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate{
     
     @IBOutlet var leftSpacer: UIView!
     @IBOutlet var rightSpacer: UIView!
@@ -24,9 +24,47 @@ class ViewController: UIViewController {
     var tipPercentDouble: Double!
     var numPeopleDouble: Double!
 
+    
+    func textField(_ tipPercentField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+            let existingTextHasDecimal = tipPercentField.text?.range(of: ".")
+            let replacementTextHasDecimal = string.range(of: ".")
+            
+            if existingTextHasDecimal != nil,
+               replacementTextHasDecimal != nil {
+                return false
+            } else {
+                return true
+            }
+        }
+        
+        func billField(_ billField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+            let existingTextHasDecimal = billField.text?.range(of: ".")
+            let replacementTextHasDecimal = string.range(of: ".")
+            
+            if existingTextHasDecimal != nil,
+               replacementTextHasDecimal != nil {
+                return false
+            } else {
+                return true
+            }
+        }
+        
+        func peopleField(_ numOfPeopleField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+            let existingTextHasDecimal = numOfPeopleField.text?.range(of: ".")
+            let replacementTextHasDecimal = string.range(of: ".")
+            
+            if existingTextHasDecimal != nil,
+               replacementTextHasDecimal != nil {
+                return false
+            } else {
+                return true
+            }
+        }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    
     
     override func loadView() {
         super.loadView()
