@@ -109,9 +109,13 @@ class ViewController: UIViewController, UITextFieldDelegate{
         billField.text = ""
         tipPercentField.text = ""
         numOfPeopleField.text = ""
-        perPersonTip.text = "$0.00"
-        perPersonTotal.text = "$0.00"
         
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .currency
+        let formattedZeroCurrency = formatter.string(from: NSNumber(value: 0.00)) ?? "$0.00"
+
+        perPersonTip.text = formattedZeroCurrency
+        perPersonTotal.text = formattedZeroCurrency
     }
     
     @IBAction func calcTips(_ sender: UITextField) {
@@ -121,15 +125,19 @@ class ViewController: UIViewController, UITextFieldDelegate{
         //Calculate the total tips divided by amount of people
         let tipCalc = (billDouble * (tipPercentDouble / 100)) / numPeopleDouble
         
-        //Turn it into a string and add the $ infront
-        var tipCalcText = String(tipCalc)
-        tipCalcText = "$" + tipCalcText
-        perPersonTip.text = tipCalcText
+        //Format the result based on the current locale
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .currency
+        if let formattedTip = formatter.string(from: NSNumber(value: tipCalc)) {
+            perPersonTip.text = formattedTip
+        } else {
+            perPersonTip.text = "$0.00" // Fallback
+        }
         
         //Logging comment
         print("Tip has been calculated!")
     }
-    
+
     @IBAction func calcTotal(_ sender: UITextField) {
         //Get the information of the text fields
         getTextInfo()
@@ -137,16 +145,19 @@ class ViewController: UIViewController, UITextFieldDelegate{
         //Calculate the total divided by amount of people
         let totalCalc = (billDouble + (billDouble * (tipPercentDouble / 100))) / numPeopleDouble
         
-        //Turn it into a string and add the $ infront
-        var totalCalcText = String(totalCalc)
-        totalCalcText = "$" + totalCalcText
-        perPersonTotal.text = totalCalcText
+        //Format the result based on the current locale
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .currency
+        if let formattedTotal = formatter.string(from: NSNumber(value: totalCalc)) {
+            perPersonTotal.text = formattedTotal
+        } else {
+            perPersonTotal.text = "$0.00" // Fallback
+        }
         
         //Logging comment
         print("Total has been calculated!")
-        
     }
-    
+
     func getTextInfo() {
         //Get the information of the text fields
         let billText = billField.text ?? ""
