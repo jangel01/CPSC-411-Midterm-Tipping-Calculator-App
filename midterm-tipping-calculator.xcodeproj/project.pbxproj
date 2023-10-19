@@ -49,6 +49,8 @@
 		806DA82F2AD79BE6001BD4E8 /* midterm-tipping-calculatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "midterm-tipping-calculatorUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		806DA8332AD79BE6001BD4E8 /* midterm_tipping_calculatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = midterm_tipping_calculatorUITests.swift; sourceTree = "<group>"; };
 		806DA8352AD79BE6001BD4E8 /* midterm_tipping_calculatorUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = midterm_tipping_calculatorUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		BCC889182AE1E26C00607AD4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		BCC8891B2AE1E37300607AD4 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Main.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -213,6 +215,7 @@
 			knownRegions = (
 				en,
 				Base,
+				es,
 			);
 			mainGroup = 806DA8062AD79BE5001BD4E8;
 			productRefGroup = 806DA8102AD79BE5001BD4E8 /* Products */;
@@ -301,6 +304,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				806DA8192AD79BE5001BD4E8 /* Base */,
+				BCC889182AE1E26C00607AD4 /* en */,
+				BCC8891B2AE1E37300607AD4 /* es */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -320,6 +325,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -380,6 +386,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";

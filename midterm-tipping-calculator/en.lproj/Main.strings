@@ -1,0 +1,33 @@
+
+/* Class = "UILabel"; text = "# of People"; ObjectID = "4HL-kN-jtL"; */
+"4HL-kN-jtL.text" = "# of People";
+
+/* Class = "UILabel"; text = "$0.00"; ObjectID = "53H-T3-Btf"; */
+"53H-T3-Btf.text" = "$0.00";
+
+/* Class = "UILabel"; text = "$0.00"; ObjectID = "6zr-KL-2we"; */
+"6zr-KL-2we.text" = "$0.00";
+
+/* Class = "UILabel"; text = "Tip %"; ObjectID = "I7o-d3-Bfa"; */
+"I7o-d3-Bfa.text" = "Tip %";
+
+/* Class = "UILabel"; text = "Tipping"; ObjectID = "NaR-qB-uMO"; */
+"NaR-qB-uMO.text" = "Tipping";
+
+/* Class = "UILabel"; text = "Bill"; ObjectID = "Rdu-IQ-QvK"; */
+"Rdu-IQ-QvK.text" = "Bill";
+
+/* Class = "UILabel"; text = "Calculator"; ObjectID = "Xmf-dd-NTP"; */
+"Xmf-dd-NTP.text" = "Calculator";
+
+/* Class = "UILabel"; text = "Tip"; ObjectID = "fqk-ZG-prJ"; */
+"fqk-ZG-prJ.text" = "Tip";
+
+/* Class = "UIButton"; configuration.title = "RESET"; ObjectID = "tlb-vl-eBQ"; */
+"tlb-vl-eBQ.configuration.title" = "RESET";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "tlb-vl-eBQ"; */
+"tlb-vl-eBQ.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Total Amount"; ObjectID = "yrb-bA-zcl"; */
+"yrb-bA-zcl.text" = "Total Amount";

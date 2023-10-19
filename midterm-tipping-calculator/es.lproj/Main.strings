@@ -1,0 +1,33 @@
+
+/* Class = "UILabel"; text = "# of People"; ObjectID = "4HL-kN-jtL"; */
+"4HL-kN-jtL.text" = "# de Personas";
+
+/* Class = "UILabel"; text = "$0.00"; ObjectID = "53H-T3-Btf"; */
+"53H-T3-Btf.text" = "0,00 €";
+
+/* Class = "UILabel"; text = "$0.00"; ObjectID = "6zr-KL-2we"; */
+"6zr-KL-2we.text" = "0,00 €";
+
+/* Class = "UILabel"; text = "Tip %"; ObjectID = "I7o-d3-Bfa"; */
+"I7o-d3-Bfa.text" = "Porcentaje de Propina";
+
+/* Class = "UILabel"; text = "Tipping"; ObjectID = "NaR-qB-uMO"; */
+"NaR-qB-uMO.text" = "Dejando Propina";
+
+/* Class = "UILabel"; text = "Bill"; ObjectID = "Rdu-IQ-QvK"; */
+"Rdu-IQ-QvK.text" = "Cuenta";
+
+/* Class = "UILabel"; text = "Calculator"; ObjectID = "Xmf-dd-NTP"; */
+"Xmf-dd-NTP.text" = "Calculadora";
+
+/* Class = "UILabel"; text = "Tip"; ObjectID = "fqk-ZG-prJ"; */
+"fqk-ZG-prJ.text" = "Propina";
+
+/* Class = "UIButton"; configuration.title = "RESET"; ObjectID = "tlb-vl-eBQ"; */
+"tlb-vl-eBQ.configuration.title" = "REINICIAR";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "tlb-vl-eBQ"; */
+"tlb-vl-eBQ.normalTitle" = "Botón";
+
+/* Class = "UILabel"; text = "Total Amount"; ObjectID = "yrb-bA-zcl"; */
+"yrb-bA-zcl.text" = "Cantidad Total";
