@@ -26,8 +26,12 @@ class ViewController: UIViewController, UITextFieldDelegate{
 
     
     func textField(_ tipPercentField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-            let existingTextHasDecimal = tipPercentField.text?.range(of: ".")
-            let replacementTextHasDecimal = string.range(of: ".")
+        
+            let currentLocale = Locale.current
+            let decimalSeparator = currentLocale.decimalSeparator ?? "."
+
+            let existingTextHasDecimal = tipPercentField.text?.range(of: decimalSeparator)
+            let replacementTextHasDecimal = string.range(of: decimalSeparator)
             
             if existingTextHasDecimal != nil,
                replacementTextHasDecimal != nil {
@@ -38,8 +42,11 @@ class ViewController: UIViewController, UITextFieldDelegate{
         }
         
         func billField(_ billField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-            let existingTextHasDecimal = billField.text?.range(of: ".")
-            let replacementTextHasDecimal = string.range(of: ".")
+            let currentLocale = Locale.current
+            let decimalSeparator = currentLocale.decimalSeparator ?? "."
+
+            let existingTextHasDecimal = billField.text?.range(of: decimalSeparator)
+            let replacementTextHasDecimal = string.range(of: decimalSeparator)
             
             if existingTextHasDecimal != nil,
                replacementTextHasDecimal != nil {
@@ -50,8 +57,11 @@ class ViewController: UIViewController, UITextFieldDelegate{
         }
         
         func peopleField(_ numOfPeopleField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-            let existingTextHasDecimal = numOfPeopleField.text?.range(of: ".")
-            let replacementTextHasDecimal = string.range(of: ".")
+            let currentLocale = Locale.current
+            let decimalSeparator = currentLocale.decimalSeparator ?? "."
+
+            let existingTextHasDecimal = numOfPeopleField.text?.range(of: decimalSeparator)
+            let replacementTextHasDecimal = string.range(of: decimalSeparator)
             
             if existingTextHasDecimal != nil,
                replacementTextHasDecimal != nil {
