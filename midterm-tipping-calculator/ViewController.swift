@@ -161,15 +161,28 @@ class ViewController: UIViewController, UITextFieldDelegate{
     func getTextInfo() {
         //Get the information of the text fields
         let billText = billField.text ?? ""
-        billDouble = Double(billText) ?? 100.00
-        let tipPercentText = tipPercentField.text ?? ""
-        tipPercentDouble = Double(tipPercentText) ?? 16.00
-        let numOfPeopleText = numOfPeopleField.text ?? ""
-        numPeopleDouble = Double(numOfPeopleText) ?? 1.00
-        
+        billDouble = stringToNum(billText)
+        let tipPercentText = tipPercentField.text ?? "16"
+        print(tipPercentText)
+        tipPercentDouble = stringToNum(tipPercentText)
+        let numOfPeopleText = numOfPeopleField.text ?? "1"
+        print(numOfPeopleText)
+        numPeopleDouble = stringToNum(numOfPeopleText)
+
         //Logging comment
         print("Bill info obtained!")
-        
     }
+    
+    func stringToNum (_ currencyString: String) -> Double {
+        //Covert from a string to a universal decimal
+        let formatter = NumberFormatter()
+        if let number = formatter.number(from: currencyString) {
+            print("Converted to ", number.doubleValue)
+            return number.doubleValue
+        } else {
+            print("Failed to parse the string.")
+            return 0.00
+        }
+    }
+    
 }
-
