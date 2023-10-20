@@ -403,6 +403,7 @@
                         <outlet property="billField" destination="hXa-Gf-1d9" id="haC-zl-BVK"/>
                         <outlet property="fifthStack" destination="QgQ-gt-DDc" id="sqB-lR-Ghp"/>
                         <outlet property="leftSpacer" destination="Vzh-0o-tNz" id="nYe-kK-kJT"/>
+                        <outlet property="logo" destination="6d5-qU-NI3" id="26c-re-WVY"/>
                         <outlet property="middleSpacer" destination="wvm-WM-Sgm" id="FpY-Ll-EN7"/>
                         <outlet property="numOfPeopleField" destination="6Rh-vl-0ar" id="Q9y-IY-UL8"/>
                         <outlet property="perPersonTip" destination="53H-T3-Btf" id="Ojn-9F-dbK"/>

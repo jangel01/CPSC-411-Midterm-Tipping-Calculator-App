@@ -19,6 +19,7 @@ class ViewController: UIViewController, UITextFieldDelegate{
     @IBOutlet var perPersonTotal: UILabel!
     @IBOutlet var resetButton: UIButton!
     @IBOutlet var middleSpacer: UIView!
+    @IBOutlet var logo: UIImageView!
     
     var faceView: UIImageView!
     var billDouble: Double!
@@ -84,10 +85,12 @@ class ViewController: UIViewController, UITextFieldDelegate{
             // portrait
             self.fvLeadingConstraintPortrait.isActive = true
             self.fvLeadingConstraintLandscape.isActive = false
+            self.logo.image = UIImage(named: "logo.png")
         } else {
             // landscape
             self.fvLeadingConstraintPortrait.isActive = false
             self.fvLeadingConstraintLandscape.isActive = true
+            self.logo.image = UIImage(named: "colored-logo.png")
         }
     }
     
@@ -222,11 +225,12 @@ class ViewController: UIViewController, UITextFieldDelegate{
             // landscape orientation
             self.fvLeadingConstraintPortrait.isActive = false
             self.fvLeadingConstraintLandscape.isActive = true
+            self.logo.image = UIImage(named: "colored-logo.png")
         } else {
             // portrait orientation
             self.fvLeadingConstraintPortrait.isActive = true
             self.fvLeadingConstraintLandscape.isActive = false
-
+            self.logo.image = UIImage(named: "logo.png")
         }
         
     }
