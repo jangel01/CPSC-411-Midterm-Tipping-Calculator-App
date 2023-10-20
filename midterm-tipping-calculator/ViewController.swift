@@ -18,11 +18,15 @@ class ViewController: UIViewController, UITextFieldDelegate{
     @IBOutlet var perPersonTip: UILabel!
     @IBOutlet var perPersonTotal: UILabel!
     @IBOutlet var resetButton: UIButton!
+    @IBOutlet var middleSpacer: UIView!
     
     var faceView: UIImageView!
     var billDouble: Double!
     var tipPercentDouble: Double!
     var numPeopleDouble: Double!
+    
+    var fvLeadingConstraintPortrait: NSLayoutConstraint!
+    var fvLeadingConstraintLandscape: NSLayoutConstraint!
 
     
     func textField(_ tipPercentField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
@@ -73,6 +77,18 @@ class ViewController: UIViewController, UITextFieldDelegate{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let size = UIScreen.main.bounds.size
+        
+        if size.width < size.height {
+            // portrait
+            self.fvLeadingConstraintPortrait.isActive = true
+            self.fvLeadingConstraintLandscape.isActive = false
+        } else {
+            // landscape
+            self.fvLeadingConstraintPortrait.isActive = false
+            self.fvLeadingConstraintLandscape.isActive = true
+        }
     }
     
     
@@ -86,11 +102,11 @@ class ViewController: UIViewController, UITextFieldDelegate{
         self.view.addSubview(self.faceView)
         
         let fvTopConstraint = self.faceView.topAnchor.constraint(equalTo: self.fifthStack.bottomAnchor, constant: 30)
-        let fvLeadingConstraint = self.faceView.leadingAnchor.constraint(equalTo: self.leftSpacer.leadingAnchor)
+        self.fvLeadingConstraintPortrait = self.faceView.leadingAnchor.constraint(equalTo: self.leftSpacer.leadingAnchor)
+        self.fvLeadingConstraintLandscape = self.faceView.leadingAnchor.constraint(equalTo: self.middleSpacer.leadingAnchor)
         let fvTrailingConstraint = self.faceView.trailingAnchor.constraint(equalTo: self.rightSpacer.trailingAnchor)
         
         fvTopConstraint.isActive = true
-        fvLeadingConstraint.isActive = true
         fvTrailingConstraint.isActive = true
         
         tipPercentField.placeholder = "16"
@@ -197,6 +213,22 @@ class ViewController: UIViewController, UITextFieldDelegate{
             print("Failed to parse the string.")
             return 0.00
         }
+    }
+    
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        super.traitCollectionDidChange(previousTraitCollection)
+        
+        if self.traitCollection.verticalSizeClass == .compact {
+            // landscape orientation
+            self.fvLeadingConstraintPortrait.isActive = false
+            self.fvLeadingConstraintLandscape.isActive = true
+        } else {
+            // portrait orientation
+            self.fvLeadingConstraintPortrait.isActive = true
+            self.fvLeadingConstraintLandscape.isActive = false
+
+        }
+        
     }
     
 }

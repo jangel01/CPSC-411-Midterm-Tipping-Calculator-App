@@ -9,7 +9,7 @@
 "6zr-KL-2we.text" = "0,00 €";
 
 /* Class = "UILabel"; text = "Tip %"; ObjectID = "I7o-d3-Bfa"; */
-"I7o-d3-Bfa.text" = "Porcentaje de Propina";
+"I7o-d3-Bfa.text" = "% de Propina";
 
 /* Class = "UILabel"; text = "Tipping"; ObjectID = "NaR-qB-uMO"; */
 "NaR-qB-uMO.text" = "Dejando Propina";
