@@ -161,19 +161,33 @@ class ViewController: UIViewController, UITextFieldDelegate{
     func getTextInfo() {
         //Get the information of the text fields
         let billText = billField.text ?? ""
-        billDouble = stringToNum(billText)
-        let tipPercentText = tipPercentField.text ?? "16"
-        print(tipPercentText)
-        tipPercentDouble = stringToNum(tipPercentText)
-        let numOfPeopleText = numOfPeopleField.text ?? "1"
-        print(numOfPeopleText)
-        numPeopleDouble = stringToNum(numOfPeopleText)
+        billDouble = stringToNum(currencyString: billText)
+        
+        //Check to see if the tip field is filled if not use the default number
+        var tipPercentText = tipPercentField.text!
+        if tipPercentText != ""{
+            tipPercentDouble = stringToNum(currencyString: tipPercentText)
+        }
+        else {
+            tipPercentText = "16"
+            tipPercentDouble = stringToNum(currencyString: tipPercentText)
+        }
+        
+        //Check to see if the numPeople field is filled if not use the default number
+        var numOfPeopleText = numOfPeopleField.text!
+        if numOfPeopleText != "" {
+            numPeopleDouble = stringToNum(currencyString: numOfPeopleText)
+        }
+        else {
+            numOfPeopleText = "1"
+            numPeopleDouble = stringToNum(currencyString: numOfPeopleText)
+        }
 
         //Logging comment
         print("Bill info obtained!")
     }
     
-    func stringToNum (_ currencyString: String) -> Double {
+    func stringToNum (currencyString: String) -> Double {
         //Covert from a string to a universal decimal
         let formatter = NumberFormatter()
         if let number = formatter.number(from: currencyString) {
