@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		802A6EA12AE351F600642AB6 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 802A6EA32AE351F600642AB6 /* Localizable.strings */; };
 		806DA8132AD79BE5001BD4E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 806DA8122AD79BE5001BD4E8 /* AppDelegate.swift */; };
 		806DA8152AD79BE5001BD4E8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 806DA8142AD79BE5001BD4E8 /* SceneDelegate.swift */; };
 		806DA8172AD79BE5001BD4E8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 806DA8162AD79BE5001BD4E8 /* ViewController.swift */; };
@@ -36,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		802A6EA22AE351F600642AB6 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		802A6EA42AE351FC00642AB6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		806DA80F2AD79BE5001BD4E8 /* midterm-tipping-calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "midterm-tipping-calculator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		806DA8122AD79BE5001BD4E8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		806DA8142AD79BE5001BD4E8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -101,6 +104,7 @@
 		806DA8112AD79BE5001BD4E8 /* midterm-tipping-calculator */ = {
 			isa = PBXGroup;
 			children = (
+				802A6EA32AE351F600642AB6 /* Localizable.strings */,
 				806DA8122AD79BE5001BD4E8 /* AppDelegate.swift */,
 				806DA8142AD79BE5001BD4E8 /* SceneDelegate.swift */,
 				806DA8162AD79BE5001BD4E8 /* ViewController.swift */,
@@ -235,6 +239,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				806DA81F2AD79BE6001BD4E8 /* LaunchScreen.storyboard in Resources */,
+				802A6EA12AE351F600642AB6 /* Localizable.strings in Resources */,
 				806DA81C2AD79BE6001BD4E8 /* Assets.xcassets in Resources */,
 				806DA81A2AD79BE5001BD4E8 /* Main.storyboard in Resources */,
 			);
@@ -300,6 +305,15 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		802A6EA32AE351F600642AB6 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				802A6EA22AE351F600642AB6 /* es */,
+				802A6EA42AE351FC00642AB6 /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		806DA8182AD79BE5001BD4E8 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

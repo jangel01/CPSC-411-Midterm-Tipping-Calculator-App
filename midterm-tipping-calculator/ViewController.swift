@@ -20,6 +20,8 @@ class ViewController: UIViewController, UITextFieldDelegate{
     @IBOutlet var resetButton: UIButton!
     @IBOutlet var middleSpacer: UIView!
     @IBOutlet var logo: UIImageView!
+    @IBOutlet var tipAmountLabel: UILabel!
+    @IBOutlet var totalAmountLabel: UILabel!
     
     var faceView: UIImageView!
     var billDouble: Double!
@@ -28,7 +30,10 @@ class ViewController: UIViewController, UITextFieldDelegate{
     
     var fvLeadingConstraintPortrait: NSLayoutConstraint!
     var fvLeadingConstraintLandscape: NSLayoutConstraint!
-
+    
+    var tipAmountLabelInitialText: String!
+    var totalAmountLabelInitialText: String!
+    let amountLabel = NSLocalizedString(" (per person)", comment: "text if there is more than one person")
     
     func textField(_ tipPercentField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         
@@ -92,6 +97,9 @@ class ViewController: UIViewController, UITextFieldDelegate{
             self.fvLeadingConstraintLandscape.isActive = true
             self.logo.image = UIImage(named: "colored-logo.png")
         }
+        
+        self.tipAmountLabelInitialText = self.tipAmountLabel.text!
+        self.totalAmountLabelInitialText = self.totalAmountLabel.text!
     }
     
     
@@ -171,6 +179,14 @@ class ViewController: UIViewController, UITextFieldDelegate{
             perPersonTotal.text = formattedTotal
         } else {
             perPersonTotal.text = "$0.00" // Fallback
+        }
+        
+        if self.numPeopleDouble > 1 {
+            self.tipAmountLabel.text = self.tipAmountLabelInitialText + self.amountLabel
+            self.totalAmountLabel.text = self.totalAmountLabelInitialText + self.amountLabel
+        } else {
+            self.tipAmountLabel.text = self.tipAmountLabelInitialText
+            self.totalAmountLabel.text = self.totalAmountLabelInitialText
         }
         
         //Logging comment
