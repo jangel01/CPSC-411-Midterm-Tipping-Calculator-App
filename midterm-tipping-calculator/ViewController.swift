@@ -2,6 +2,22 @@
 // CWID: 886286863
 // Email: mraden@csu.fullerton.edu
 //
+// Name: Jason Angel
+// CWID: 887662807
+// Email: jasonangel@csu.fullerton.edu
+//
+// Name: Jiajun Gu
+// CWID: 888286416
+// Email: jiajun.gu@csu.fullerton.edu
+//
+// Name: Wesley Zoroya
+// CWID: 886150119
+// Email: wzoroya@csu.fullerton.edu
+//
+// Name: Jesse Shaihor
+// CWID: 889202628
+// Email: jcshaihor@csu.fullerton.edu
+//
 //  ViewController.swift
 //  midterm-tipping-calculator
 //
@@ -132,7 +148,6 @@ class ViewController: UIViewController, UITextFieldDelegate{
         self.billField.resignFirstResponder()
         self.tipPercentField.resignFirstResponder()
         self.numOfPeopleField.resignFirstResponder()
-        self.faceView.resignFirstResponder()
     }
     
     @IBAction func resetButtonTapped(_ sender: UIButton) {
