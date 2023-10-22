@@ -25,7 +25,8 @@ class ViewController: UIViewController, UITextFieldDelegate{
     @IBOutlet var logo: UIImageView!
     @IBOutlet var tipAmountLabel: UILabel!
     @IBOutlet var totalAmountLabel: UILabel!
-    @IBOutlet var faceView: UIImageView!
+    // progammatic view
+    var faceView: UIImageView!
     
     var billDouble: Double!
     var tipPercentDouble: Double!
@@ -176,9 +177,9 @@ class ViewController: UIViewController, UITextFieldDelegate{
         getTextInfo()
         
         //update fae according to tip info
-        if tipPercentDouble > 20 {
+        if tipPercentDouble >= 20 {
             self.faceView.image = UIImage(named: "happy-face.png")
-        } else if tipPercentDouble > 15 {
+        } else if tipPercentDouble >= 15 {
             self.faceView.image = UIImage(named: "meh-face.png")
         } else {
             self.faceView.image = UIImage(named: "sad-face.png")
