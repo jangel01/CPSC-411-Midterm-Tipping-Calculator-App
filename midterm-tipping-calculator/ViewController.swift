@@ -1,3 +1,6 @@
+// Name: Mark Raden
+// CWID: 886286863
+// Email: mraden@csu.fullerton.edu
 //
 //  ViewController.swift
 //  midterm-tipping-calculator
@@ -22,8 +25,8 @@ class ViewController: UIViewController, UITextFieldDelegate{
     @IBOutlet var logo: UIImageView!
     @IBOutlet var tipAmountLabel: UILabel!
     @IBOutlet var totalAmountLabel: UILabel!
+    @IBOutlet var faceView: UIImageView!
     
-    var faceView: UIImageView!
     var billDouble: Double!
     var tipPercentDouble: Double!
     var numPeopleDouble: Double!
@@ -107,7 +110,7 @@ class ViewController: UIViewController, UITextFieldDelegate{
         super.loadView()
         
         self.faceView = UIImageView()
-        self.faceView.image = UIImage(named: "sad-face.png")
+        self.faceView.image = UIImage(named: "meh-face.png")
         self.faceView.contentMode = .scaleAspectFit
         self.faceView.translatesAutoresizingMaskIntoConstraints = false
         self.view.addSubview(self.faceView)
@@ -128,6 +131,7 @@ class ViewController: UIViewController, UITextFieldDelegate{
         self.billField.resignFirstResponder()
         self.tipPercentField.resignFirstResponder()
         self.numOfPeopleField.resignFirstResponder()
+        self.faceView.resignFirstResponder()
     }
     
     @IBAction func resetButtonTapped(_ sender: UIButton) {
@@ -161,8 +165,24 @@ class ViewController: UIViewController, UITextFieldDelegate{
             perPersonTip.text = "$0.00" // Fallback
         }
         
+        updateFace()
+        
         //Logging comment
         print("Tip has been calculated!")
+    }
+    
+    @IBAction func updateFace() {
+        //retrieve tip info from text fied
+        getTextInfo()
+        
+        //update fae according to tip info
+        if tipPercentDouble > 20 {
+            self.faceView.image = UIImage(named: "happy-face.png")
+        } else if tipPercentDouble > 15 {
+            self.faceView.image = UIImage(named: "meh-face.png")
+        } else {
+            self.faceView.image = UIImage(named: "sad-face.png")
+        }
     }
 
     @IBAction func calcTotal(_ sender: UITextField) {
