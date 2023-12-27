@@ -15,6 +15,9 @@ You input the amount of the bill, the tip percent for the tip amount to add on t
 
 The app is translated into Spanish. The app is not configured to work with tablets.
 
+# Set up 
+Simply clone the project and open it in Xcode. You can then run the simulator.
+
 # Screenshots
 ![Simulator Screenshot - iPhone 14 Pro - 2023-12-26 at 18 59 13](https://github.com/jangel01/CPSC-411-Tipping-Calculator-iOS-Mobile-App/assets/60250253/59e1d4d8-5473-458f-80fe-885c54293c33)
 ![Simulator Screenshot - iPhone 14 Pro - 2023-12-26 at 18 59 43](https://github.com/jangel01/CPSC-411-Tipping-Calculator-iOS-Mobile-App/assets/60250253/441719a8-3d8c-4326-9c59-e9d221dc7aab)
