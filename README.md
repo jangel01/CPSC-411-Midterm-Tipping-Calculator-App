@@ -11,7 +11,7 @@ CPSC 411 - Mobile Device Application Programming
 # Overview
 The app functions similarly to the tipping calculator than can be found on Google: https://www.google.com/search?client=firefox-b-1-d&q=tipping+calculator
 
-You input the amount of the bill, the tip percent, and the number of people the bill should be divided by. 
+You input the amount of the bill, the tip percent for the tip amount to add on top of, and the number of people the total bill should be divided by. 
 
 The app is translated into Spanish. The app is not configured to work with tablets.
 
